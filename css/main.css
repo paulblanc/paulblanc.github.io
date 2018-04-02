@@ -1,6 +1,7 @@
-.block-left{
+.block-left {
   width:50%;
-  height:100vh;
+  height: 100%;
+  min-height: 100vh;
   background-color:#000000;
   float:left;
   text-align: center;
@@ -8,15 +9,14 @@
   color: #fff;
   overflow: hidden;
 }
-}
-.block-right{
+
+.block-right {
   width:50%;
-  height:100vh;
+  height: 100%;
+  min-height: 100vh;
   background-color:#ffffff;
   float:right; 
-  text-align:center;
   justify-content:center;
-  overflow: auto;
   position: relative;
 }
 
@@ -79,16 +79,20 @@ h5{
 
 
 /* MEDIA QUERIES FOR 600px <= Resolutions */ 
-
 @media (max-width:600px){
   .block-left{
     display:block;
     width:100%;
+    float: none;
+    height: auto;
   }
+  
   .block-right{
     display:block;
     width:100%;
+    float: none;  
   }
+  
   .col{
     padding: 50px;
     display: -ms-flexbox;
@@ -101,7 +105,5 @@ h5{
     text-align: left;
     justify-content: center;
     align-items: center;
-    height:100vh;
-    
-    }
-    
+    height: auto;
+  }
